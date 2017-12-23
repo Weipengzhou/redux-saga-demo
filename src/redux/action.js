@@ -1,22 +1,22 @@
-let actions = {
-    buttonAdd: function (text) {
+
+   export function  buttonAdd(text){
         return {
             type: 'BUTTON_CLICK_ADD',
             text
         }
-    },
+    }
 
-    getSuccess: function (text) {
+    export function getSuccess(text) {
         return {
             type: 'GET_SUCCESS',
             text
         }
-    },
-    getError: function (text) {
+    }
+    export function getError(text) {
         return {
             type: 'GET_ERROR',
             text
         }
     }
-}
-export default actions;
+ 
+

@@ -1,5 +1,5 @@
 import { call, put, takeLatest,fork } from 'redux-saga/effects';
-import action from './action';
+import * as action from './action';
 import changeNumber from '../api'
 function* getClick({text}){
     try{
