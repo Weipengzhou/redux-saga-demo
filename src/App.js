@@ -8,25 +8,25 @@ class App extends Component {
   constructor(props){
     super(props);
     this.state = {
-        value:123
+     
     }
   }
   handClick=()=>{
     this.props.buttonAdd();
   }
   render() {
-    const {value}= this.props;
+    const {value,buttonState}= this.props;
     return (
       <div className="App">
           {value}       
-         <button onClick={this.handClick.bind(this)}>点击请求</button>
+        <button onClick={this.handClick.bind(this)} disabled={buttonState}>点击请求</button>
       </div>
     );
   }
 }
 
 function mapStateToProps(state) {
-  return { value:state.value,list:state.list  }
+  return { value:state.value,buttonState:state.buttonState}
 }
 
 function mapDispatchToProps(dispatch) {
